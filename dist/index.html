@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Hello, World – AWS‑flavored masterpiece</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Fira+Code:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* ─── AWS brand palette ──────────────────────────────────────────────── */
+      :root {
+        --aws-navy: #232f3e;
+        --aws-navy-600: #1c2732;
+        --aws-orange: #ff9900;
+        --aws-orange-600: #e88b00;
+        --aws-slate: #394b59;
+        --page-max-w: 1040px;
+      }
+
+      /* ─── Global reset & base ───────────────────────────────────────────── */
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+        line-height: 1.6;
+        background: linear-gradient(135deg, var(--aws-navy) 0%, var(--aws-navy-600) 100%);
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        padding: 2rem;
+      }
+
+      /* ─── Container ─────────────────────────────────────────────────────── */
+      .card {
+        width: 100%;
+        max-width: var(--page-max-w);
+        background: rgba(57, 75, 89, 0.35);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(16px) saturate(180%);
+        border-radius: 1.5rem;
+        padding: 3.5rem clamp(1.5rem, 4vw, 4rem);
+        text-align: center;
+        box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.55);
+        animation: fade-slide-in 0.9s cubic-bezier(0.33, 1, 0.68, 1) both;
+      }
+
+      /* ─── Headline ──────────────────────────────────────────────────────── */
+      h1 {
+        font-size: clamp(3rem, 6vw + 1rem, 6rem);
+        font-weight: 800;
+        margin-bottom: 1rem;
+        background: linear-gradient(90deg, var(--aws-orange) 0%, #ffd666 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        letter-spacing: -1.2px;
+      }
+
+      p.lead {
+        font-size: clamp(1rem, 1.1vw + 1rem, 1.5rem);
+        margin-bottom: 2.5rem;
+        color: #d8e0e8;
+      }
+
+      /* ─── CTA Button ────────────────────────────────────────────────────── */
+      .btn {
+        display: inline-block;
+        font-size: 1.05rem;
+        font-weight: 600;
+        text-decoration: none;
+        color: var(--aws-navy);
+        background-color: var(--aws-orange);
+        padding: 0.95rem 2.25rem;
+        border-radius: 999px;
+        transition: transform 0.25s ease, background-color 0.25s ease,
+          box-shadow 0.25s ease;
+      }
+      .btn:hover {
+        background-color: var(--aws-orange-600);
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.4);
+      }
+      .btn:active {
+        transform: translateY(0);
+        box-shadow: none;
+      }
+
+      /* ─── Subtle bottom code watermark ──────────────────────────────────── */
+      footer {
+        margin-top: 3.5rem;
+        font-family: "Fira Code", monospace;
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.4);
+      }
+      footer a {
+        color: var(--aws-orange);
+        text-decoration: none;
+      }
+
+      /* ─── Animation keyframes ───────────────────────────────────────────── */
+      @keyframes fade-slide-in {
+        0% {
+          opacity: 0;
+          transform: translateY(40px) scale(0.97);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="card" role="main">
+      <h1>Hello, World!</h1>
+      <p class="lead">
+        Welcome to the most polished “Hello&nbsp;World” you’ve ever seen — lovingly
+        crafted by principal engineers &amp; designers using the colors of the
+        AWS brand.
+      </p>
+      <a class="btn" href="https://aws.amazon.com" target="_blank" rel="noopener noreferrer">
+        Explore AWS
+      </a>
+      <footer>
+        <p>&lt;code/&gt; with ❤️ by <a href="#">a Principal Front‑End&nbsp;Dev</a> &amp; <a href="#">Principal&nbsp;UX&nbsp;Engineer</a></p>
+      </footer>
+    </main>
+  </body>
+</html>
